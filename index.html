@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi Moklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #b1d7ff;
+            color: rgb(54, 89, 132);
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .video-section {
+            width: 70%;
+            background-color: black;
+        }
+        .video-section iframe {
+            width: 100%;
+            height: 400px;
+        }
+        .button-section {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .button-section button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #b1d7ff;
+            color: rgb(54, 89, 132);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Playlist</div>
+    <div class="container">
+        <div class="video-section">
+            <iframe 
+    id="videoFrame" 
+    src="https://www.youtube.com/embed/EDFy0J1niYw" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+        </div>
+        <div class="button-section">
+            <button onclick="changeVideo('https://www.youtube.com/embed/R_LrnmJQ0hg')">Prestasi 1</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/KGe6kaN432I')">Prestasi 2</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/kOBr5AASQdA')">Prestasi 3</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/4adZ7AguVcw')">Prestasi 4</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/GaSXZgrH1AY')">Prestasi 5</button>
+        </div>
+    </div>
+    <div class="footer">Selamat menikmati lagu lagu ini</div>
+    
+    <script>
+        function changeVideo(url) {
+            document.getElementById('videoFrame').src = url;
+        }
+    </script>
+</body>
+</html>
